@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$link = mysqli_connect('127.0.0.1', 'app', 'fM1oQ4mV', 'app');
+$link = mysqli_connect('*****', '****', '*****', '****');
 if ($link == false)
     print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
 //} else {
