@@ -1,0 +1,164 @@
+
+<style>
+    .chat {
+        margin-top: 5%;
+        border:1px solid #333;
+        width:30%;
+        height:40%;
+        background:#555;
+        color:#fff;
+        margin-left: 35%;
+    }
+
+    .chat-messages {
+        min-height:93%;
+        max-height:93%;
+        overflow:auto;
+    }
+
+    .chat-messages__content {
+        padding:1px;
+    }
+
+    .chat__message {
+        border-left:3px solid #333;
+        margin-top:2px;
+        padding:2px;
+        display: none;
+    }
+
+    .chat-input {
+        min-height:6%;
+    }
+    input {
+        font-family:arial;
+        font-size:16px;
+        vertical-align:middle;
+        background:#333;
+        color:#fff;
+        border:0;
+        display:inline-block;
+        margin:1px;
+        height:30px;
+    }
+
+    .chat-form__input {
+        width:79%;
+    }
+
+    .chat-form__submit {
+        width:18%;
+    }
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        color: #ffffff;
+        padding: 16px 26px 15px 30px;
+        background: -moz-linear-gradient(
+            top,
+            #42aaff 0%,
+            #003366);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#42aaff),
+            to(#003366));
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: 1px solid #003366;
+        -moz-box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.5);
+        -webkit-box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.5);
+        box-shadow:
+            0px 1px 3px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(255,255,255,0.5);
+        text-shadow:
+            0px -1px 0px rgba(000,000,000,0.7),
+            0px 1px 0px rgba(255,255,255,0.3);
+        display: inline-block;
+        text-decoration: none;
+        float: right;
+    }
+    a:hover {
+        background: -moz-linear-gradient(
+            top,
+            #42aaff 0%,
+            #0d5aa7);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#42aaff),
+            to(#0d5aa7));
+    }
+    a:active {
+        background: -moz-linear-gradient(
+            top,
+            #003366 0%,
+            #42aaff);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#003366),
+            to(#42aaff));
+    }
+
+    .exit a{
+        margin-right: 70%;
+
+    }
+    .static {
+        margin-right: 10%;
+        margin-left: 10%;
+        padding: 10% 10% 10%;
+        background: #9d9d9d;
+    }
+    .answer h1{
+
+        margin-left: 45%;
+    }
+
+    button {
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+        padding: .8em 1em calc(.8em + 3px);
+        border-radius: 3px;
+        background: rgb(64,199,129);
+        box-shadow: 0 -3px rgb(53,167,110) inset;
+        transition: 0.2s;
+    }
+    button:hover { background: rgb(53, 167, 110); }
+    button:active {
+        background: rgb(33,147,90);
+        box-shadow: 0 3px rgb(33,147,90) inset;
+    }
+
+
+</style>
+<div id="auth-form">
+
+    <form method="post" >
+        <input type="text" class="login" placeholder="Введите свой логин">
+        <input type="password" class="password" placeholder="Введите свой пароль">
+        <button type="submit"> Авторизоваться </button>
+    </form></div>
+<div class="exit"><a href="sess_destroy.php">выйти</a></div>
+<div class="static"><h1>Какой-то статичный текст</h1> </div>
+ <div class="answer"><p><h1>Отзывы</h1></p></div>
+<div class='chat'>
+    <div class='chat-messages'>
+        <div class='chat-messages__content' id='messages'>
+            Загрузка...
+        </div>
+    </div>
+   <div> <a href="#" class="lazy_button">Показать ещё</a></div>
+    <div class='chat-input'>
+        <form method='post' id='chat-form'>
+            <input type='text' id='message-text' class='chat-form__input' placeholder='Введите сообщение'> <input type='submit' class='chat-form__submit' value='Отправить'>
+        </form>
+    </div>
+
+</div>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+<script src="script.js"></script>
